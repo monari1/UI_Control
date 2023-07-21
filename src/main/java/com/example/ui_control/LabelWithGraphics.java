@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.ContentDisplay;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
@@ -15,13 +16,16 @@ import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Objects;
 
 public class LabelWithGraphics extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        ImageView imageView = new ImageView();
+        ImageView imageView;
+        imageView = new ImageView(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/image/frank.jpeg"))));
+        imageView.relocate(400, 200);
         Label lb1 = new Label("us states", imageView);
-        lb1.setStyle("-fx-border-color: green, -fx-border-width:2");
+        lb1.setStyle("-fx-border-color: green; -fx-border-width:2");
         lb1.setContentDisplay(ContentDisplay.BOTTOM);
         lb1.setTextFill(Color.RED);
 
