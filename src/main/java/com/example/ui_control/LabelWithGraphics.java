@@ -22,6 +22,7 @@ public class LabelWithGraphics extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         ImageView imageView;
+//        imageView = new ImageView(new Image("file://image/frank.jpeg"));
         imageView = new ImageView(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/image/frank.jpeg"))));
         imageView.relocate(400, 200);
         Label lb1 = new Label("us states", imageView);
