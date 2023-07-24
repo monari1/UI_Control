@@ -18,7 +18,7 @@ import javafx.stage.Stage;
 
 import java.util.Objects;
 
-public class ButtonBase extends Application {
+public class ButtonDemo extends Application {
     protected Text text = new Text(50, 50, "JavaFx Programming");
     public BorderPane getButton(){
         HBox paneForButtons = new HBox(20);
@@ -36,17 +36,17 @@ public class ButtonBase extends Application {
         paneForText.getChildren().add(text);
         pane.setCenter(paneForText);
 
-        CheckBox chk = new CheckBox("US");
-        chk.setGraphic(new ImageView(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/image/images.jpeg")))));
-        chk.setContentDisplay(ContentDisplay.LEFT);
-        chk.setTextFill(Color.GREEN);
-        chk.setStyle("−fx−border−color: black");
-        chk.setSelected(true);
-        chk.setPadding(new Insets(5, 5, 5, 5));
-        Pane paneForCheckBox = new Pane();
-        paneForCheckBox.getChildren().add(chk);
-
-        pane.setRight(paneForCheckBox);
+//        CheckBox chk = new CheckBox("US");
+//        chk.setGraphic(new ImageView(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/image/images.jpeg")))));
+//        chk.setContentDisplay(ContentDisplay.LEFT);
+//        chk.setTextFill(Color.GREEN);
+//        chk.setStyle("−fx−border−color: black");
+//        chk.setSelected(true);
+//        chk.setPadding(new Insets(5, 5, 5, 5));
+//        Pane paneForCheckBox = new Pane();
+//        paneForCheckBox.getChildren().add(chk);
+//
+//        pane.setRight(paneForCheckBox);
 
 
         btLeft.setOnAction(e->text.setX(text.getX()-10));
