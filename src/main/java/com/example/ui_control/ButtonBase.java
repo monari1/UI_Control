@@ -1,14 +1,18 @@
 package com.example.ui_control;
 
 import javafx.application.Application;
+import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
+import javafx.scene.control.ContentDisplay;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
@@ -31,6 +35,18 @@ public class ButtonBase extends Application {
         Pane paneForText = new Pane();
         paneForText.getChildren().add(text);
         pane.setCenter(paneForText);
+
+        CheckBox chk = new CheckBox("US");
+        chk.setGraphic(new ImageView(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/image/images.jpeg")))));
+        chk.setContentDisplay(ContentDisplay.LEFT);
+        chk.setTextFill(Color.GREEN);
+        chk.setStyle("−fx−border−color: black");
+        chk.setSelected(true);
+        chk.setPadding(new Insets(5, 5, 5, 5));
+        Pane paneForCheckBox = new Pane();
+        paneForCheckBox.getChildren().add(chk);
+
+        pane.setRight(paneForCheckBox);
 
 
         btLeft.setOnAction(e->text.setX(text.getX()-10));
