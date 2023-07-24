@@ -18,8 +18,8 @@ public class ButtonBase extends Application {
     protected Text text = new Text(50, 50, "JavaFx Programming");
     public BorderPane getButton(){
         HBox paneForButtons = new HBox(20);
-        Button btRight = new Button("Right", new ImageView(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/image/frank.jpeg")))));
-        Button btLeft = new Button("Left", new ImageView(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/image/event2.jpg")))));
+        var btRight = new Button("Right", new ImageView(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/image/images.jpeg")))));
+        var btLeft = new Button("Left", new ImageView(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/image/frank.jpeg")))));
 
         paneForButtons.getChildren().addAll(btRight, btLeft);
         paneForButtons.setAlignment(Pos.CENTER);
@@ -30,6 +30,7 @@ public class ButtonBase extends Application {
 
         Pane paneForText = new Pane();
         paneForText.getChildren().add(text);
+        pane.setCenter(paneForText);
 
 
         btLeft.setOnAction(e->text.setX(text.getX()-10));
