@@ -17,8 +17,8 @@ public class CheckBoxDemo extends ButtonDemo {
 
 
     @Override
-    public BorderPane getButton() {
-        BorderPane pane = super.getButton();
+    public BorderPane getPane() {
+        BorderPane pane = super.getPane();
         Font fontBoldItalic = Font.font("Time New Roman",
                 FontWeight.BOLD, FontPosture.ITALIC, 20);
         Font fontBold = Font.font("Times New Roman",
@@ -60,6 +60,7 @@ public class CheckBoxDemo extends ButtonDemo {
         return pane;
 
     }
+
 
     public static void main(String[] args) {
         launch(args);

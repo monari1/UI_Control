@@ -20,7 +20,7 @@ import java.util.Objects;
 
 public class ButtonDemo extends Application {
     protected Text text = new Text(50, 50, "JavaFx Programming");
-    public BorderPane getButton(){
+    public BorderPane getPane(){
         HBox paneForButtons = new HBox(20);
         var btRight = new Button("Right", new ImageView(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/image/images.jpeg")))));
         var btLeft = new Button("Left", new ImageView(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/image/frank.jpeg")))));
@@ -58,7 +58,7 @@ public class ButtonDemo extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        Scene scene = new Scene(getButton(), 450, 200);
+        Scene scene = new Scene(getPane(), 450, 200);
         primaryStage.setTitle("Button UI Control");
         primaryStage.setScene(scene);
         primaryStage.show();
