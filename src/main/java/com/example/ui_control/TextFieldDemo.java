@@ -24,14 +24,14 @@ public class TextFieldDemo extends ButtonDemo {
         tf.setAlignment(Pos.BASELINE_CENTER);
         paneForTextField.setCenter(tf);
 
-        TextArea textArea = new TextArea();
+//        TextArea textArea = new TextArea();
+//
+//        textArea.setPrefRowCount(5);
+//        textArea.setPrefColumnCount(20);
+//        textArea.setFont(Font.font("Courier", 20));
 
-        textArea.setPrefRowCount(5);
-        textArea.setPrefColumnCount(20);
-        textArea.setFont(Font.font("Courier", 20));
-
-        ScrollPane scrollPane = new ScrollPane(textArea);
-        paneForTextField.setRight(textArea);
+//        ScrollPane scrollPane = new ScrollPane(textArea);
+//        paneForTextField.setRight(textArea);
 
 
         pane.setTop(paneForTextField);
